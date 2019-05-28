@@ -18,6 +18,11 @@ public class DemoApplication {
 					 @Override
 					 public void addCorsMappings(CorsRegistry registry) {
 							 registry.addMapping("/movies").allowedOrigins("*");
+							 registry.addMapping("/").allowedOrigins("*");
+							 registry.addMapping("/movies").allowedOrigins("http://localhost:3000");
+							 registry.addMapping("/").allowedOrigins("http://localhost:3000");		 
+							 registry.addMapping("/movies").allowedOrigins("66.112.160.233");
+							 registry.addMapping("/").allowedOrigins("66.112.160.233");
 					 }
 			 };
 	 }
