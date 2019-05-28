@@ -79,13 +79,14 @@ public class MovieController {
   }
 
   @DeleteMapping("/movies/{id}")
-  public int EditOneMovie(@PathVariable("id") long MovieId) {
+  public Movie EditOneMovie(@PathVariable("id") long MovieId) {
     try {
+      Movie result = database.getOne(MovieId);
       database.DeleteItem(MovieId);
-      return 1;
+      return result;
     } catch(Exception e){
       System.out.println(e);
-      return -1;
+      return null;
     }
   }
 
