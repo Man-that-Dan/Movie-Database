@@ -6,7 +6,7 @@ Records are returned in JSON format
 
 Backend currently deployed at https://krw-technical-test.herokuapp.com/movies <br/>
 
-Endpoints:
+Endpoints: <br/>
 GET: https://krw-technical-test.herokuapp.com/movies Retrieves all resources <br/>
 GET: https://krw-technical-test.herokuapp.com/movies/{id} Retrieves a resource <br/>
 POST: https://krw-technical-test.herokuapp.com/movies Creates a resource. Request body must contain JSON with title and director attributes <br/>
