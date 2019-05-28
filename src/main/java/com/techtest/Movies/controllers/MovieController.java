@@ -3,7 +3,7 @@ package com.techtest.Movies.controllers;
 import com.techtest.Movies.model.Movie;
 import com.techtest.Movies.dataAccess.database;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpServletResponse;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
