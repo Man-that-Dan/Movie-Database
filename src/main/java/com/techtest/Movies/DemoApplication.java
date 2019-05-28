@@ -12,7 +12,7 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	@Bean
+
 	public WebMvcConfigurer corsConfigurer() {
 			 return new WebMvcConfigurer() {
 					 @Override
