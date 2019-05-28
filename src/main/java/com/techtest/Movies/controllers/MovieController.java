@@ -3,6 +3,7 @@ package com.techtest.Movies.controllers;
 import com.techtest.Movies.model.Movie;
 import com.techtest.Movies.dataAccess.database;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpServletResponse;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,11 +40,13 @@ public class MovieController {
     }
   }
 
+
   //get all movies
   @GetMapping("/movies")
-  public List<Movie> getAllMovies() {
+  public List<Movie> getAllMovies(HttpServletResponse response) {
     try {
       List<Movie> movies = database.getAll();
+      response.setHeader("Content-Range", movies.size());
       return movies;
     } catch(Exception e){
       System.out.println(e);
