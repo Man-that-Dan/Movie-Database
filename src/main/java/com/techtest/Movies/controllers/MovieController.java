@@ -46,7 +46,7 @@ public class MovieController {
   public List<Movie> getAllMovies(HttpServletResponse response) {
     try {
       List<Movie> movies = database.getAll();
-      response.setHeader("Content-Range", movies.size());
+      response.setHeader("Content-Range", Integer.toString(movies.size()));
       return movies;
     } catch(Exception e){
       System.out.println(e);
